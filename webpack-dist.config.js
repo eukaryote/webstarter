@@ -4,6 +4,7 @@ var path = require('path'),
   subDir = 'dist';
 
 module.exports = {
+  context: path.join(__dirname, 'src'),
   entry: {
     main: './main'
   },
