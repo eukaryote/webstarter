@@ -24,7 +24,7 @@ For Development
 
 Run the webpack dev server against a temporary build of the app that doesn't version files with a content-specific hash::
 
-    npm run dev
+    npm run serve:dev
 
 
 If you just want to build the resources for inspection, you could run::
@@ -41,6 +41,10 @@ Build the app for production use, which versions all JS and CSS files by includi
 
 The output will be in the 'dist' subdirectory. Note that the
 ``dist/index.html`` is not versioned, so that file should not be cached.
+
+You can also run the webpack dev server against the ``dist`` directory as follows::
+
+    npm run serve:dist
 
 
 Run Tests

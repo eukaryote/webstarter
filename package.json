@@ -10,7 +10,8 @@
     "test:watch": "npm run test -- -w",
     "prebuild": "rm -rf ./build/*",
     "build": "webpack --progress --colors",
-    "dev": "webpack-dev-server --devtool eval --progress --colors --content-base=public --watch --inline --hot",
+    "serve:dev": "webpack-dev-server --devtool eval --progress --colors --content-base=public --watch --inline --hot",
+    "serve:dist": "webpack-dev-server --config webpack-dist.config.js --dev-tool eval --progress --colors --content-base=dist --watch --inline --hot",
     "predist": "rm -rf ./dist/*",
     "dist": "webpack --config webpack-dist.config.js"
   },
