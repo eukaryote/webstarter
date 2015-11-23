@@ -1,9 +1,10 @@
 {
-  "name": "webexp2",
+  "name": "webstarter",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
   "scripts": {
+    "clean": "rm -rf ./build/* ./dist/*",
     "test": "mocha test/",
     "test:watch": "npm run test -- -w",
     "prebuild": "rm -rf ./build/*",
