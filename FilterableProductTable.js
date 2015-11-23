@@ -1,9 +1,9 @@
-// This example is from "thinking in react".
+// This example is from 'thinking in react'.
 var React = require('react');
 
 var ProductCategoryRow = React.createClass({
     render: function() {
-        return (<tr><th colSpan="2">{this.props.category}</th></tr>);
+        return (<tr><th colSpan='2'>{this.props.category}</th></tr>);
     }
 });
 
@@ -65,17 +65,17 @@ var SearchBar = React.createClass({
         return (
             <form>
                 <input
-                    type="text"
-                    placeholder="Search..."
+                    type='text'
+                    placeholder='Search...'
                     value={this.props.filterText}
-                    ref="filterTextInput"
+                    ref='filterTextInput'
                     onChange={this.handleChange}
                 />
                 <p>
                     <input
-                        type="checkbox"
+                        type='checkbox'
                         checked={this.props.inStockOnly}
-                        ref="inStockOnlyInput"
+                        ref='inStockOnlyInput'
                         onChange={this.handleChange}
                     />
                     {' '}

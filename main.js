@@ -1,4 +1,4 @@
-document.write(require("./content.js"));
+document.write(require('./content.js'));
 
 var ReactDOM = require('react-dom'),
     React = require('react'),
@@ -14,7 +14,7 @@ var ReactDOM = require('react-dom'),
     ];
 
 ReactDOM.render(
-    <TitleComponent name="Viewer"/>,
+    <TitleComponent name='Viewer'/>,
     document.getElementById('main')
 );
 

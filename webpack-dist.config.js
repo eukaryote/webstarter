@@ -1,26 +1,26 @@
-var path = require("path"),
-    ExtractTextPlugin = require("extract-text-webpack-plugin"),
-    HtmlWebpackPlugin = require("html-webpack-plugin"),
-    subDir = "dist";
+var path = require('path'),
+    ExtractTextPlugin = require('extract-text-webpack-plugin'),
+    HtmlWebpackPlugin = require('html-webpack-plugin'),
+    subDir = 'dist';
 
 module.exports = {
     entry: {
-        main: "./main"
+        main: './main'
     },
     output: {
         path: path.join(__dirname, subDir),
-        filename: "[name].[hash].js",
-        chunkFilename: "[name].[chunkhash].js"
+        filename: '[name].[hash].js',
+        chunkFilename: '[name].[chunkhash].js'
     },
     module: {
         loaders: [
             {
                 test: /\.css$/,
-                loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+                loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
             },
             {
                 test: /\.js$/,
-                loader: "jsx-loader"
+                loader: 'jsx-loader'
             }
         ]
     },
@@ -28,17 +28,17 @@ module.exports = {
         /* create one css file per initial chunk and embed stylesheets into
            additional chunks (recommended because it's optimal with respect
             to initial page loading time): */
-        new ExtractTextPlugin("[name].[chunkhash].css")
+        new ExtractTextPlugin('[name].[chunkhash].css')
         /* Create one css file per initial chunk, which also contains styles
            from additional chunks (in small apps with multiple entry points,
            this mode might be better because of HTTP request overheads and
            caching) */
-        // new ExtractTextPlugin("[name].[chunkhash].css", {allChunks: true})
+        // new ExtractTextPlugin('[name].[chunkhash].css', {allChunks: true})
         , new HtmlWebpackPlugin({
             title: 'My Web App',
             template: 'index.html',
             inject: 'body'
         })
     ],
-    recordsPath: path.resolve(path.join(__dirname, subDir), "webpack.records.js")
+    recordsPath: path.resolve(path.join(__dirname, subDir), 'webpack.records.js')
 };
