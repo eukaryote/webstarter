@@ -3,8 +3,8 @@ document.write(require('./content.js'));
 
 var ReactDOM = require('react-dom'),
   React = require('react'),
-  TitleComponent = require('./TitleComponent.js'),
-  FilterableProductTable = require('./FilterableProductTable.js'),
+  TitleComponent = require('./TitleComponent.jsx'),
+  FilterableProductTable = require('./FilterableProductTable.jsx'),
   PRODUCTS = [
     {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
     {category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball'},

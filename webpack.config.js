@@ -6,7 +6,7 @@ var path = require('path'),
 module.exports = {
   context: path.join(__dirname, 'src'),
   entry: {
-    main: './main'
+    main: './main.jsx'
   },
   output: {
     path: path.join(__dirname, subDir),
@@ -20,8 +20,12 @@ module.exports = {
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
       },
       {
-        test: /\.js$/,
-        loader: 'jsx-loader'
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'babel',
+        query: {
+          presets: ['react', 'es2015']
+        }
       }
     ]
   },
