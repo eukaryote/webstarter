@@ -9,12 +9,14 @@
     "lint": "eslint .",
     "test": "mocha test/",
     "test:watch": "npm run test -- -w",
-    "prebuild": "rm -rf ./build/*",
     "build": "webpack --progress --colors",
-    "serve:dev": "webpack-dev-server --devtool eval --progress --colors --content-base=public --watch --inline --hot",
+    "prebuild": "rm -rf ./build/*",
+    "build:dist": "webpack --config webpack-dist.config.js",
+    "prebuild:dist": "rm -rf ./dist/*",
+    "serve": "webpack-dev-server --devtool eval --progress --colors --content-base=public --watch --inline --hot",
+    "preserve": "npm run build",
     "serve:dist": "webpack-dev-server --config webpack-dist.config.js --dev-tool eval --progress --colors --content-base=dist --watch --inline --hot",
-    "predist": "rm -rf ./dist/*",
-    "dist": "webpack --config webpack-dist.config.js"
+    "preserve:dist": "npm run build:dist"
   },
   "author": "",
   "license": "ISC",
