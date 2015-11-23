@@ -49,3 +49,11 @@ Run Tests
 Run the tests::
 
     npm test
+
+
+Run ESLint
+----------
+
+Run ESLint::
+
+    npm run lint
