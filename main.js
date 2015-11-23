@@ -1,3 +1,4 @@
+/*eslint no-unused-vars: 0 */
 document.write(require('./content.js'));
 
 var ReactDOM = require('react-dom'),

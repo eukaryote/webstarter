@@ -1,4 +1,5 @@
 // This example is from 'thinking in react'.
+/*eslint no-unused-vars: 0 */
 var React = require('react');
 
 var ProductCategoryRow = React.createClass({
