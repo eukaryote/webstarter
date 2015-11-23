@@ -1,0 +1,32 @@
+{
+  "name": "webexp2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "mocha test/",
+    "test:watch": "npm run test -- -w",
+    "prebuild": "rm -rf ./build/*",
+    "build": "webpack --progress --colors",
+    "dev": "webpack-dev-server --devtool eval --progress --colors --content-base build",
+    "predist": "rm -rf ./dist/*",
+    "dist": "webpack --config webpack-dist.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "css-loader": "^0.23.0",
+    "extract-text-webpack-plugin": "^0.9.1",
+    "html-webpack-plugin": "^1.6.2",
+    "jsx-loader": "^0.13.2",
+    "mocha": "^2.3.4",
+    "mocha-phantomjs": "^4.0.1",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.8",
+    "webpack-dev-server": "^1.12.1"
+  },
+  "dependencies": {}
+}
